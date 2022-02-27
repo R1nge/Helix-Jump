@@ -6,7 +6,7 @@ namespace Platforms
         {
             if (playerMovement.GetVelocity() > velocityToDestroy)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
 
             playerMovement.AddForce();
