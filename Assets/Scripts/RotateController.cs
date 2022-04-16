@@ -9,10 +9,7 @@ public class RotateController : MonoBehaviour
     [SerializeField] private List<Platform> platforms;
     private Camera _camera;
 
-    private void Awake()
-    {
-        _camera = FindObjectOfType<Camera>();
-    }
+    private void Awake() => _camera = FindObjectOfType<Camera>();
 
     private void Start()
     {
