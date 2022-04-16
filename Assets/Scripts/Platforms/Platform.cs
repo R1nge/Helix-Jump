@@ -9,9 +9,15 @@ namespace Platforms
         private void OnCollisionEnter(Collision other)
         {
             if (!other.gameObject.TryGetComponent(out PlayerMovementController playerMovement)) return;
-            OnCollision(playerMovement);
+            OnCollision(other);
         }
 
-        protected abstract void OnCollision(PlayerMovementController playerMovement);
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.TryGetComponent(out PlayerMovementController playerMovement)) return;
+            gameObject.SetActive(false);
+        }
+
+        protected abstract void OnCollision(Collision collision);
     }
 }
