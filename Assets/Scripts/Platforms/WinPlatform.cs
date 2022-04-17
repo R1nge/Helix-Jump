@@ -1,11 +1,11 @@
-using Platforms;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WinPlatform : Platform
+public class WinPlatform : MonoBehaviour
 {
-    protected override void OnCollision(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
+        if(!other.transform.CompareTag("Player")) return;
         GameManager.WinGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
