@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7750405633929564836}
   - component: {fileID: 1768577802076565665}
   - component: {fileID: 343792940336731814}
+  - component: {fileID: 1555023831443114583}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0.02, y: 11.27, z: 0.02}
   m_LocalScale: {x: 350, y: 350, z: 25}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -109,8 +112,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.008852168, y: 0.010161449, z: 0.0130144935}
-  m_Center: {x: -0.004189243, y: -0.004919283, z: -0.0034927542}
+  m_Size: {x: 0.008852168, y: 0.010161449, z: 0.0030757247}
+  m_Center: {x: -0.004189243, y: -0.004919283, z: -0.008462141}
 --- !u!114 &343792940336731814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,3 +127,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityToDestroy: 15
+--- !u!114 &1555023831443114583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932870329729560030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d15edced1fa4f41afc198af41dfe09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20

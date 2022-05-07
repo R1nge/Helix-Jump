@@ -1,12 +1,20 @@
+using Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WinPlatform : MonoBehaviour
+namespace Platforms
 {
-    private void OnCollisionEnter(Collision other)
+    public class WinPlatform : MonoBehaviour
     {
-        if(!other.transform.CompareTag("Player")) return;
-        GameManager.WinGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        private GameManager _gameManager;
+
+        private void Awake() => _gameManager = FindObjectOfType<GameManager>();
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (!other.transform.CompareTag("Player")) return;
+            _gameManager.WinGame();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        }
     }
 }

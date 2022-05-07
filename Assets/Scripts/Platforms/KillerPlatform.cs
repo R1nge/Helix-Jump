@@ -1,12 +1,17 @@
+using Core;
 using UnityEngine;
 
 namespace Platforms
 {
     public class KillerPlatform : Platform
     {
-        protected override void OnCollision(Collision collision)
+        private GameManager _gameManager;
+
+        private void Awake() => _gameManager = FindObjectOfType<GameManager>();
+
+        protected override void OnCollisionEnter(Collision other)
         {
-            GameManager.GameOver();
+            _gameManager.GameOver();
         }
     }
 }

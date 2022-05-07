@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - PlatformKiller
+  - Target
   layers:
   - Default
   - TransparentFX
