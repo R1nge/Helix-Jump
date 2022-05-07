@@ -6,7 +6,9 @@ namespace Platforms
     {
         [SerializeField] protected float velocityToDestroy;
 
-        protected virtual void OnCollisionEnter(Collision other)
+        protected abstract void OnCollisionEnter(Collision other);
+
+        private void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.TryGetComponent(out PlayerMovementController playerMovement)) return;
             gameObject.SetActive(false);

@@ -13,7 +13,6 @@ namespace Platforms
                 gameObject.SetActive(false);
             }
 
-            print(velocity);
             if (!other.transform.TryGetComponent(out PlayerMovementController playerMovement)) return;
             playerMovement.AddForce();
         }

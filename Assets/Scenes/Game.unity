@@ -428,6 +428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2029172057}
+  - component: {fileID: 2029172059}
   - component: {fileID: 2029172058}
   m_Layer: 0
   m_Name: GameManager
@@ -466,6 +467,18 @@ MonoBehaviour:
   platforms:
   - {fileID: 8932870329729560030, guid: e150fdd1051dfab4688099ade2035956, type: 3}
   platformsAmount: 10
+--- !u!114 &2029172059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029172055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2b96f8686ffb447bdcf8e293f86d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4747549748024069358
 PrefabInstance:
   m_ObjectHideFlags: 0
