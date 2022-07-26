@@ -9,9 +9,6 @@ namespace Platforms
 
         private void Awake() => _gameManager = FindObjectOfType<GameManager>();
 
-        protected override void OnCollisionEnter(Collision other)
-        {
-            _gameManager.GameOver();
-        }
+        protected override void OnCollisionEnter(Collision other) => _gameManager.GameOver();
     }
 }

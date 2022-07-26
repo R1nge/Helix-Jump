@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class PlayerMovementController : MonoBehaviour
+namespace Core
 {
-    [SerializeField] private float forceY;
-    private Rigidbody _rigidbody;
+    public class PlayerMovementController : MonoBehaviour
+    {
+        [SerializeField] private float forceY;
+        private Rigidbody _rigidbody;
 
-    private void Awake() => _rigidbody = GetComponent<Rigidbody>();
+        private void Awake() => _rigidbody = GetComponent<Rigidbody>();
     
-    public void AddForce() => _rigidbody.AddForce(0, forceY, 0, ForceMode.Impulse);
+        public void AddForce() => _rigidbody.AddForce(0, forceY, 0, ForceMode.Impulse);
+    }
 }
