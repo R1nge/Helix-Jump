@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cdbb40e11399e4a17882ada20a1b896a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17628048, g: 0.22062775, b: 0.30295068, a: 1}
+  m_IndirectSpecularColor: {r: 0.12075967, g: 0.18638065, b: 0.33532852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -253,7 +253,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2717663, g: 0.19215688, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -374,7 +374,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ce1c3debf87662b49b0a601cb0edf579, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 2029172057}
   - component: {fileID: 2029172059}
   - component: {fileID: 2029172058}
+  - component: {fileID: 2029172060}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -466,6 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platforms:
   - {fileID: 8932870329729560030, guid: e150fdd1051dfab4688099ade2035956, type: 3}
+  - {fileID: 8661107630302888803, guid: 3fd273d24de2cb44294ecd621d8a9ccd, type: 3}
   platformsAmount: 10
 --- !u!114 &2029172059
 MonoBehaviour:
@@ -477,6 +479,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2b96f8686ffb447bdcf8e293f86d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2029172060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029172055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbdd009a17a44d39d35b32f1028e272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4747549748024069358
@@ -534,6 +548,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4747549749608402537, guid: d9d575052528f694c960d6ba20aeb7fe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bbc8d4839df0f748ae88c7442b60263, type: 2}
     - target: {fileID: 4747549749608402538, guid: d9d575052528f694c960d6ba20aeb7fe, type: 3}
       propertyPath: m_Name
       value: Player

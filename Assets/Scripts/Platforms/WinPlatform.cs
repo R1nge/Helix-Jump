@@ -1,6 +1,5 @@
 using Core;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Platforms
 {
@@ -14,7 +13,6 @@ namespace Platforms
         {
             if (!other.transform.CompareTag("Player")) return;
             _gameManager.WinGame();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
         }
     }
 }
